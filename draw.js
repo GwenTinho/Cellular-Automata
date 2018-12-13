@@ -49,13 +49,19 @@ function colorGOLinv(num) {
     }
 }
 
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 function drawGrid(grid, xGap, size, gap, colorFn) {
+    clearCanvas();
     for (let i = 0; i < grid.length; i++) {
         drawArray(grid[i], xGap, i * (size + gap), size, gap, colorFn);
     }
 }
 
 function drawIntArr(arr, l, xGap, size, gap) {
+    clearCanvas();
     const w = arr.length / l;
     const sizeplusgap = size + gap;
     for (let j = 0; j < l; j++) {

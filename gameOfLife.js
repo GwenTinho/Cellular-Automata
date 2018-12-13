@@ -69,18 +69,20 @@ function stepFromAlg(grid, rules) {
 
 function stepContinuousFromAlg(grid, time, xGap, size, gap, rules) {
     drawGrid(grid, xGap, size, gap, colorGOL);
-    setInterval(() => {
+    let timer = setInterval(() => {
         grid = stepFromAlg(grid, rules);
         drawGrid(grid, xGap, size, gap, colorGOL);
     }, time);
+    return timer;
 }
 
 function stepContinuous(grid, time, xGap, size) {
     drawGrid(grid, xGap, size, 2, colorGOL);
-    setInterval(() => {
+    let timer = setInterval(() => {
         grid = step(grid);
         drawGrid(grid, xGap, size, 2, colorGOL);
     }, time);
+    return timer;
 }
 
 function stepFromIntArr(arr, l) {
@@ -171,8 +173,9 @@ function stepFromIntArr(arr, l) {
 
 function stepContinuousIntArr(arr, l, time, xGap, size) {
     drawIntArr(arr, l, xGap, size, 2);
-    setInterval(() => {
+    let timer = setInterval(() => {
         arr = stepFromIntArr(arr, l);
         drawIntArr(arr, l, xGap, size, 2);
     }, time);
+    return timer;
 }
