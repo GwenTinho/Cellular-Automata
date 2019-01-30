@@ -141,26 +141,3 @@ function infiniteGridFast(cell) {
     }
     return reduceTillCompleteFast(_cells);
 }
-
-
-/*
-
-
-function isComplete(cells) {
-    let _cells = copy(cells);
-    for (let j = 0; j < _cells.length; j++) {
-        for (let i = 0; i < _cells.length; i++) {
-            if (_cells[j][i] >= 4) return false;
-        }
-    }
-    return true;
-}
-
-function reduceTillComplete(cells) {
-    let _cells = copy(cells);
-    while (!isComplete(_cells)) {
-        _cells = pileReduce(_cells);
-    }
-    return _cells;
-}
-*/
