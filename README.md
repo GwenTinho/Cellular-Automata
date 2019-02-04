@@ -17,3 +17,5 @@ This experimental app includes many types of:
 - Some Concrete Math Functions (GCD, powFast, modBase2)
 
 - A file full of binary operations on int32's  
+
+This project is licensed under the terms of the MIT license
